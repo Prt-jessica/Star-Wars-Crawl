@@ -4,6 +4,12 @@ body{
     height: 100%;
     overflow: hidden;
 }
+.fade{
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    top: -25px;
+}
 .starwarsText{
     display: flex;
     justify-content: center;
@@ -30,6 +36,6 @@ body{
     }
     100%{
         top: -8000px;
-        transform: rotateX(80deg) translateZ(-2000px);
+        transform: rotateX(-25deg) translateZ(-2000px);
     }
 }
