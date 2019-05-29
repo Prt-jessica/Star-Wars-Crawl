@@ -4,11 +4,30 @@ body{
     height: 100%;
     overflow: hidden;
 }
+.fondu{ 
+    color: #31737d;
+    animation: fondu 4s;
+    opacity: 0;
+    font-size: 200%;
+    font-weight: 100%;
+    text-align: center;
+    margin-top:25%;
+}
+.logo{
+
+    animation: 4s animlogo 4s;
+    transform: scale();
+    opacity: 0;
+}
 .fade{
     position: relative;
     width: 100%;
     min-height: 60vh;
-    top: -25px;
+    top: -10px;
+    mask-image: linear-gradient(rgba(0,0,0,0)10%, rgba(0,0,0,1)40%);
+    -webkit-mask-image: linear-gradient(rgba(0,0,0,0)10%, rgba(0,0,0,1)40%);
+    z-index: 1;
+
 }
 .starwarsText{
     display: flex;
@@ -26,7 +45,7 @@ body{
     position: relative;
     top: 8000px;
     transform-origin: 50% 100%;
-    animation: crawl 80s linear;
+    animation: 10s crawl 8s linear;
 }
 @keyframes crawl{
     0%{
@@ -36,6 +55,28 @@ body{
     }
     100%{
         top: -8000px;
-        transform: rotateX(-25deg) translateZ(-2000px);
+        transform: rotateX(25deg) translateZ(-2000px);
     }
+}
+@keyframes fondu{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity:0;
+    }
+
+}
+@keyframes animlogo{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+}
+    100%{
+        opacity: 0;
+        transform: scale(0)
+}
 }
